@@ -8,7 +8,7 @@ echo ""
 # Config
 GITHUB_USER="MaymiPR"
 GITHUB_REPO="Raspberry-Pi-Tools"
-BRANCH="refs/heads/main"
+BRANCH="main"
 INSTALL_DIR="$HOME/Documents/Raspberry Pi Tools"
 BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO/$BRANCH"
 
