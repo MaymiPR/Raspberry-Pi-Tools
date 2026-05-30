@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "============================="
-echo "       PORT SCANNER          "
+echo "       PI PORT SCANNER       "
 echo "============================="
 echo ""
 
