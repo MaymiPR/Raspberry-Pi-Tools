@@ -10,7 +10,7 @@ curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/P
 **Pi System Info:** It displays a quick snapshot of your Pi's CPU, RAM, disk, temperature, network, and OS info in one clean readout.
 Run in terminal:
 ```bash
-curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/Pi%20System%20Info | bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/Pi%20System%20Info.sh | bash
 ```
 
 **Pi Cleaner:** It cleans up unused packages, cache, old logs, and temp files to free up disk space.
