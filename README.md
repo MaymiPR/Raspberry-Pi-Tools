@@ -1,5 +1,5 @@
-# Raspberry-Pi
-Tools for the Raspberry Pi
+# Raspberry-Pi-Tools
+Simple tools for the Raspberry Pi
 
 **Pi Updater:** It fully updates your Raspberry Pi's software, firmware, and cleans up leftovers, then optionally reboots.
 Run in terminal:
