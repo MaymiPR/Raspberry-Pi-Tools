@@ -1,6 +1,11 @@
 # Raspberry-Pi-Tools
 Simple tools for the Raspberry Pi
 #
+**Pi Tools Installer:** Downloads all Pi tools from GitHub into a dedicated folder in your Documents.
+```bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Tools%20Installer.sh | bash
+```
+#
 **Pi Updater:** It fully updates your Raspberry Pi's software, firmware, and cleans up leftovers, then optionally reboots.
 Run in terminal:
 ```bash
