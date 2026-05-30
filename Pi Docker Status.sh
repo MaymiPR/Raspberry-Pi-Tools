@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "============================="
-echo "      DOCKER STATUS          "
+echo "      PI DOCKER STATUS       "
 echo "============================="
 echo ""
 
