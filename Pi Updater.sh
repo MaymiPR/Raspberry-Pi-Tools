@@ -1,5 +1,8 @@
 #!/bin/bash
-echo "Starting Pi Updater..."
+
+echo "============================="
+echo "         PI UPDATER          "
+echo "============================="
 echo ""
 
 echo "[1/4] Refreshing package list..."
