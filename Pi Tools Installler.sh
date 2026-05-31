@@ -13,13 +13,13 @@ INSTALL_DIR="$HOME/Documents/Pi-Tools"
 BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO/$BRANCH"
 
 TOOLS=(
-    "Pi%20Updater.sh"
-    "Pi%20System%20Info.sh"
-    "Pi%20Cleaner.sh"
-    "Pi%20Docker%20Status.sh"
-    "Pi%20Docker%20Cleanup.sh"
-    "Pi%20Docker%20Restart.sh"
-    "Pi%20Port%20Scanner.sh"
+    "Pi-Updater.sh"
+    "Pi-System-Info.sh"
+    "Pi-Cleaner.sh"
+    "Pi-Docker-Status.sh"
+    "Pi-Docker-Cleanup.sh"
+    "Pi-Docker-Restart.sh"
+    "Pi-Port-Scanner.sh"
 )
 
 # Create folder if it doesn't exist
