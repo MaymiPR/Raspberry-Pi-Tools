@@ -15,7 +15,7 @@ sudo apt full-upgrade -y
 echo ""
 echo "[3/4] Updating bootloader..."
 sudo rpi-eeprom-update -a
-sudo rpi-update -y
+sudo rpi-update
 
 echo ""
 echo "[4/4] Cleaning up..."
