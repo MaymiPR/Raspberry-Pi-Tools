@@ -24,6 +24,7 @@ Update, clean, monitor, and manage Docker on your Pi with a single command each.
 - [Safety notes](#safety-notes)
 - [Contributing](#contributing)
 - [License](#license)
+- [How it was made](#how-it-was-made)
 
 ## Quick start
 
@@ -172,3 +173,7 @@ When you add a tool, also add it to the `TOOLS` list in [`Pi-Tools-Installer.sh`
 ## License
 
 Released under the [MIT License](LICENSE).
+
+## How it was made
+
+Raspberry Pi Tools was created entirely with [Claude](https://www.anthropic.com/claude), Anthropic's AI. Every line of code was written with Claude.
