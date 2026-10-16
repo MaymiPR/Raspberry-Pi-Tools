@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Pi Docker Status
+# Shows running and stopped containers and installed images.
 
 echo "============================="
 echo "      PI DOCKER STATUS       "

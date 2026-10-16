@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Pi Docker Cleanup
+# Removes stopped containers, unused images, and unused volumes.
 
 echo "============================="
 echo "     PI DOCKER CLEANUP       "

@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Pi Port Scanner
+# Lists listening ports and active connections with their process and
+# service name, plus a short connection summary.
 
 echo "============================="
 echo "       PI PORT SCANNER       "
@@ -15,7 +19,7 @@ echo ""
 printf "%-10s %-10s %-25s %-20s %s\n" "Protocol" "Port" "Address" "Process" "Service"
 echo "----------------------------------------------------------------------"
 
-ss -tulnp | grep LISTEN | while read line; do
+ss -tulnp | grep LISTEN | while read -r line; do
     proto=$(echo "$line" | awk '{print $1}')
     address=$(echo "$line" | awk '{print $5}')
     port=$(echo "$address" | rev | cut -d: -f1 | rev)
@@ -33,12 +37,12 @@ echo "--- Active Connections ---"
 echo ""
 printf "%-10s %-25s %-25s %s\n" "Protocol" "Local Address" "Remote Address" "State"
 echo "----------------------------------------------------------------------"
-ss -tunp | grep -v LISTEN | grep -v "Local" | while read line; do
+ss -tunp | grep -v LISTEN | grep -v "Local" | while read -r line; do
     proto=$(echo "$line" | awk '{print $1}')
     state=$(echo "$line" | awk '{print $2}')
-    local=$(echo "$line" | awk '{print $5}')
+    local_addr=$(echo "$line" | awk '{print $5}')
     remote=$(echo "$line" | awk '{print $6}')
-    printf "%-10s %-25s %-25s %s\n" "$proto" "$local" "$remote" "$state"
+    printf "%-10s %-25s %-25s %s\n" "$proto" "$local_addr" "$remote" "$state"
 done
 
 echo ""
@@ -56,7 +60,7 @@ echo "--- Top Processes Using Ports ---"
 echo ""
 sudo ss -tulnp | grep -o 'users:(("[^"]*",[^)]*))' | \
     grep -o '"[^"]*"' | sort | uniq -c | sort -rn | head -10 | \
-    while read count name; do
+    while read -r count name; do
         printf "  %-5s connections: %s\n" "$count" "$name"
     done
 

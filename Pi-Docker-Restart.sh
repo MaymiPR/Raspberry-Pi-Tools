@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Pi Docker Restart
+# Lists all containers and restarts the one you choose.
 
 echo "============================="
 echo "     PI DOCKER RESTART       "
@@ -15,7 +18,7 @@ echo ""
 docker ps -a --format "{{.Names}}\t{{.Status}}" | nl -w2 -s") "
 
 echo ""
-read -p "Enter container name to restart: " container < /dev/tty
+read -r -p "Enter container name to restart: " container < /dev/tty
 
 if [ -z "$container" ]; then
     echo "No container entered, exiting."

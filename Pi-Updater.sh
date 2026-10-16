@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Pi Updater
+# Updates all packages, the bootloader EEPROM, and cleans up afterwards,
+# then offers to reboot.
 
 echo "============================="
 echo "         PI UPDATER          "
@@ -22,7 +26,10 @@ sudo apt autoremove -y
 sudo apt clean
 
 echo ""
-read -p "Reboot now? (y/n): " answer < /dev/tty
-if [ "$answer" = "y" ]; then
+echo "Update complete!"
+echo "============================="
+echo ""
+read -r -p "Reboot now? (y/n): " answer < /dev/tty
+if [[ "$answer" =~ ^[Yy]$ ]]; then
     sudo reboot
 fi

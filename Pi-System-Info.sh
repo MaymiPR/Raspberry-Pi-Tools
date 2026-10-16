@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Pi System Info
+# Prints a one-screen snapshot of temperature, CPU, RAM, disk, uptime,
+# network addresses, hostname, and OS.
 
 echo "============================="
 echo "       PI SYSTEM INFO        "
@@ -34,8 +38,8 @@ wlan=$(ip addr show wlan0 2>/dev/null | grep "inet " | awk '{print $2}' | cut -d
 echo "WLAN IP:      ${wlan:-Not connected}"
 
 # Public IP
-pub_ip=$(curl -s ifconfig.me)
-echo "Public IP:    $pub_ip"
+pub_ip=$(curl -s --max-time 5 ifconfig.me)
+echo "Public IP:    ${pub_ip:-Unavailable}"
 
 # Hostname
 echo "Hostname:     $(hostname)"
